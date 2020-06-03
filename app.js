@@ -2,20 +2,20 @@
 new Vue({
   el: '#vue-app', //html入口
   data: {
-    name: 'Summer',
-    wechat: 123456,
-    website: 'https://www.baidu.com',
-    websiteTag: '<a href="https://www.taobao.com">淘宝</a>',
+    age: 30,
+    x: 0,
+    y: 0,
   },
   methods: {
-    // greeting() {
-    //   return '很高兴认识大家！';
-    // },
-    greeting(time) {
-      return `Good ${time} ${this.name}`;
+    add(inc) {
+      this.age += inc;
     },
-    haveLunch(time) {
-      return `${this.name} 你吃${time}了吗？`;
+    subtract(dec) {
+      this.age -= dec;
+    },
+    updataXY(event) {
+      this.x = event.offsetX;
+      this.y = event.offsetY;
     },
   },
 });

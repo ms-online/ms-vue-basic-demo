@@ -11,19 +11,21 @@
   <body>
     <!-- 声明vue的el -->
     <div id="vue-app">
-      <h1>姓名：{{ name }}</h1>
-      <h1>微信号：{{ wechat }}</h1>
-      <h2>{{greeting('morning')}}</h2>
-      <h2>{{haveLunch('早饭')}}</h2>
-      <!-- v-bind：属性绑定，以v-开头的就是指令,可简写为: -->
-      <p>
-        <a :href="website">百度</a>
-      </p>
+      <h1>Events事件</h1>
+      <!--v-on:绑定事件监听器,简写@ -->
+      <!-- <button @click="age++">加一岁</button> -->
+      <!-- <button v-on:click="age--">减一岁</button> -->
+      <!-- 方法中可以加括号，可不加 -->
+      <button @click="add(1)">加一岁</button>
+      <button v-on:click="subtract(1)">减一岁</button>
+      <button @dblclick="add(10)">加十岁</button>
+      <button v-on:dblclick="subtract(10)">减十岁</button>
+      <p>我的年龄是：{{ age }}</p>
 
-      <!-- <p>{{ websiteTag }}</p> -->
-      <!-- v-html:插入html进行解析 -->
-      <p v-html="websiteTag"></p>
-      <p><input type="text" v-bind:value="name" /></p>
+      <!-- mousemove Event Object（事件对象） -->
+      <div id="canvas" v-on:mousemove="updataXY">
+        {{x}},{{y}}
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
