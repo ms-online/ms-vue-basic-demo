@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Vue Basic</title>
+  </head>
+  <body>
+    <!-- 声明vue的el -->
+    <div id="vue-app">
+      <h1>姓名：{{ name }}</h1>
+      <h1>微信号：{{ wechat }}</h1>
+      <h2>{{greeting('morning')}}</h2>
+      <h2>{{haveLunch('早饭')}}</h2>
+      <!-- v-bind：属性绑定，以v-开头的就是指令,可简写为: -->
+      <p>
+        <a :href="website">百度</a>
+      </p>
+
+      <!-- <p>{{ websiteTag }}</p> -->
+      <!-- v-html:插入html进行解析 -->
+      <p v-html="websiteTag"></p>
+      <p><input type="text" v-bind:value="name" /></p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
