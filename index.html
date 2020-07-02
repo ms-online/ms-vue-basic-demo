@@ -11,22 +11,18 @@
   <body>
     <!-- 声明vue的el -->
     <div id="vue-app">
-      <h1>动态绑定样式 两种方式</h1>
+      <h1>v-if指令 & v-show</h1>
 
-      <!-- <h2>示例一 属性绑定</h2>
-      <div
-        @click="mrChangeColor =!mrChangeColor"
-        v-bind:class="{changeColor:mrChangeColor}"
-      >
-        <span>你好！</span>
-      </div> -->
+      <button @click="error =!error">error</button>
+      <button @click="success =!success">success</button>
 
-      <h2>示例二 计算属性绑定（可以优化性能）</h2>
-      <button @click="mrChangeColor =!mrChangeColor">Change Color</button>
-      <button @click="mrChangeLength =!mrChangeLength">Change Lenth</button>
-      <div v-bind:class="compClasses">
-        <span>你好！</span>
-      </div>
+      <!-- <h2>v-show</h2> -->
+      <!-- <p v-if="error">error：如果条件为真，则显示</p>
+      <p v-else-if="success">success：如果条件为真，则显示</p>
+      <p v-else>others</p> -->
+      <h2>v-show指令</h2>
+      <p v-show="error">网络连接错误：404</p>
+      <p v-show="success">网络连接成功：200</p>
     </div>
     <script src="app.js"></script>
   </body>
