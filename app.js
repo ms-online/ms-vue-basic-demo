@@ -3,15 +3,21 @@ new Vue({
   el: '#vue-app', //html入口
   data() {
     return {
-      fruits: ['苹果', '草莓', '西瓜', '菠萝'],
-      products: [
-        { name: '苹果', color: 'red' },
-        { name: '草莓', color: 'red' },
-        { name: '西瓜', color: 'green' },
-        { name: '菠萝', color: 'yellow' },
-      ],
+      status: 100,
+      ended: false,
     };
   },
-  methods: {},
+  methods: {
+    punch() {
+      this.status -= 20;
+      if (this.status <= 0) {
+        this.ended = true;
+      }
+    },
+    restart() {
+      this.status = 100;
+      this.ended = false;
+    },
+  },
   computed: {},
 });

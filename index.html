@@ -6,43 +6,23 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <link rel="stylesheet" href="style.css" />
-    <title>Vue Basic</title>
+    <title>Vue CDN DEMO</title>
   </head>
   <body>
-    <!-- 声明vue的el -->
     <div id="vue-app">
-      <h1>v-for指令</h1>
-      <!-- <ul>
-        <li v-for="fruit in fruits">
-          {{fruit}}
-        </li>
-      </ul> -->
+      <!-- pic img -->
+      <div id="pic" v-bind:class="{change:ended}"></div>
 
-      <!-- 下标 -->
-      <!-- <ul>
-        <li v-for="(fruit,index) in fruits">
-          {{index}} - {{fruit}}
-        </li>
-      </ul> -->
+      <!-- pic status -->
+      <div id="pic-status">
+        <div v-bind:style="{width:status + '%'}"></div>
+      </div>
 
-      <!-- <ul>
-        <li v-for="(product,index) in products">
-          {{index}} : {{product.name}} - {{product.color}}
-        </li>
-      </ul> -->
-
-      <!-- template -->
-      <!-- <template v-for="(product,index) in products">
-        <h3>{{index}} - {{product.name}}</h3>
-        <p>color:{{product.color}}</p>
-      </template> -->
-
-      <!-- 遍历对象 -->
-      <template v-for="(product,index) in products">
-        <div v-for="(val,key) in product">
-          <h3>{{index}} - {{key}} - {{val}}</h3>
-        </div>
-      </template>
+      <!-- game control -->
+      <div id="controls">
+        <button @click="punch()" v-show="!ended">点击</button>
+        <button @click="restart()">还原</button>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>

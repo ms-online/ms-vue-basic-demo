@@ -1,16 +1,27 @@
-span {
-  background: red;
-  display: inline-block;
-  padding: 10px;
-  color: #fff;
-  margin: 10px 0;
+#pic {
+  width: 200px;
+  height: 500px;
+  margin: 0 auto;
+  background: url(img/sun.jpeg) center no-repeat;
+  background-size: 80%;
+}
+#pic.change {
+  background: url(img/moon.jpg) center no-repeat;
+  background-size: 100%;
 }
 
-.changeColor span {
-  background: green;
+#pic-status {
+  width: 200px;
+  border: 2px solid #000;
+  margin: 0 auto 20px auto;
 }
 
-.changeLength span:after {
-  content: '哈哈哈';
-  margin-left: 10px;
+#pic-status div {
+  height: 20px;
+  background-color: red;
+}
+
+#controls {
+  width: 120px;
+  margin: 0 auto;
 }
