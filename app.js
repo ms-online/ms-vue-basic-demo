@@ -1,24 +1,13 @@
 // 实力化vue 对象
 new Vue({
   el: '#vue-app', //html入口
-  data: {
-    age: 30,
-    x: 0,
-    y: 0,
-  },
+  data: {},
   methods: {
-    add(inc) {
-      this.age += inc;
+    logName() {
+      console.log('正在输入姓名...');
     },
-    subtract(dec) {
-      this.age -= dec;
-    },
-    updataXY(event) {
-      this.x = event.offsetX;
-      this.y = event.offsetY;
-    },
-    handleClick() {
-      alert('hello');
+    logAge() {
+      console.log('正在输入年龄...');
     },
   },
 });
