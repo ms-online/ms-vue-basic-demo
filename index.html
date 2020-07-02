@@ -9,15 +9,12 @@
     <title>Vue CDN DEMO</title>
   </head>
   <body>
-    <h1>多个vue实力对象</h1>
+    <h1>注册全局组件</h1>
     <div id="vue-app-one">
-      <h2>{{title}}</h2>
-      <p>{{ greeting }}</p>
+      <greet></greet>
     </div>
     <div id="vue-app-two">
-      <h2>{{title}}</h2>
-      <p>{{ greeting }}</p>
-      <button @click="changeAppOneTitle()">点击修改app one 的titile</button>
+      <greet />
     </div>
     <script src="app.js"></script>
   </body>
