@@ -11,18 +11,38 @@
   <body>
     <!-- 声明vue的el -->
     <div id="vue-app">
-      <h1>v-if指令 & v-show</h1>
+      <h1>v-for指令</h1>
+      <!-- <ul>
+        <li v-for="fruit in fruits">
+          {{fruit}}
+        </li>
+      </ul> -->
 
-      <button @click="error =!error">error</button>
-      <button @click="success =!success">success</button>
+      <!-- 下标 -->
+      <!-- <ul>
+        <li v-for="(fruit,index) in fruits">
+          {{index}} - {{fruit}}
+        </li>
+      </ul> -->
 
-      <!-- <h2>v-show</h2> -->
-      <!-- <p v-if="error">error：如果条件为真，则显示</p>
-      <p v-else-if="success">success：如果条件为真，则显示</p>
-      <p v-else>others</p> -->
-      <h2>v-show指令</h2>
-      <p v-show="error">网络连接错误：404</p>
-      <p v-show="success">网络连接成功：200</p>
+      <!-- <ul>
+        <li v-for="(product,index) in products">
+          {{index}} : {{product.name}} - {{product.color}}
+        </li>
+      </ul> -->
+
+      <!-- template -->
+      <!-- <template v-for="(product,index) in products">
+        <h3>{{index}} - {{product.name}}</h3>
+        <p>color:{{product.color}}</p>
+      </template> -->
+
+      <!-- 遍历对象 -->
+      <template v-for="(product,index) in products">
+        <div v-for="(val,key) in product">
+          <h3>{{index}} - {{key}} - {{val}}</h3>
+        </div>
+      </template>
     </div>
     <script src="app.js"></script>
   </body>
