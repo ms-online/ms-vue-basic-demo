@@ -9,20 +9,15 @@
     <title>Vue CDN DEMO</title>
   </head>
   <body>
-    <div id="vue-app">
-      <!-- pic img -->
-      <div id="pic" v-bind:class="{change:ended}"></div>
-
-      <!-- pic status -->
-      <div id="pic-status">
-        <div v-bind:style="{width:status + '%'}"></div>
-      </div>
-
-      <!-- game control -->
-      <div id="controls">
-        <button @click="punch()" v-show="!ended">点击</button>
-        <button @click="restart()">还原</button>
-      </div>
+    <h1>多个vue实力对象</h1>
+    <div id="vue-app-one">
+      <h2>{{title}}</h2>
+      <p>{{ greeting }}</p>
+    </div>
+    <div id="vue-app-two">
+      <h2>{{title}}</h2>
+      <p>{{ greeting }}</p>
+      <button @click="changeAppOneTitle()">点击修改app one 的titile</button>
     </div>
     <script src="app.js"></script>
   </body>
