@@ -16,7 +16,7 @@
       <!-- <button @click="age++">加一岁</button> -->
       <!-- <button v-on:click="age--">减一岁</button> -->
       <!-- 方法中可以加括号，可不加 -->
-      <button @click="add(1)">加一岁</button>
+      <button @click.once="add(1)">加一岁</button>
       <button v-on:click="subtract(1)">减一岁</button>
       <button @dblclick="add(10)">加十岁</button>
       <button v-on:dblclick="subtract(10)">减十岁</button>
@@ -26,6 +26,12 @@
       <div id="canvas" v-on:mousemove="updataXY">
         {{x}},{{y}}
       </div>
+
+      <!-- 事件修饰符: .stop,.prevent,.self,.once等-->
+      <!-- 可阻止默认事件，阻止冒泡，执行一次，鼠标左右键等 -->
+      <p>
+        <a @click.prevent="handleClick" href="https://www.baidu.com">百度</a>
+      </p>
     </div>
     <script src="app.js"></script>
   </body>
