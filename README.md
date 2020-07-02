@@ -1,1 +1,1 @@
-lesson10:特殊属性：ref 属性（refs）,可以绑定元素，获得元素对象。
+lesson9:双向数据绑定 v-model，修饰符：lazy，number，trim。
