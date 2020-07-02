@@ -11,14 +11,13 @@
   <body>
     <!-- 声明vue的el -->
     <div id="vue-app">
-      <h1>Events事件</h1>
-      <!-- v-model双向数据绑定 -->
-      <h1>双向数据绑定 input/select/textarea</h1>
+      <!-- ref属性 -->
+      <h1>ref</h1>
       <label for="name">姓名</label>
-      <input type="text" name="name" v-model.lazy="name" />
+      <input type="text" name="name" ref="name" @keyup="getName" />
       <span>{{ name }}</span>
       <label for="age">年龄</label>
-      <input type="text" age="age" v-model="age" />
+      <input type="text" age="age" ref="age" @keyup="getAge" />
       <span>{{ age }}</span>
     </div>
     <script src="app.js"></script>
