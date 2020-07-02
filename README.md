@@ -1,1 +1,1 @@
-lesson9:双向数据绑定 v-model，修饰符：lazy，number，trim。
+lesson11:watch 对象 监听数据 可以在调试的时候使用，一般不建议使用，因为损耗性能。

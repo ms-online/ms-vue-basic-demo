@@ -5,5 +5,20 @@ new Vue({
     name: '',
     age: 20,
   },
-  methods: {},
+  methods: {
+    getName() {
+      this.name = this.$refs.name.value;
+    },
+    getAge() {
+      this.age = this.$refs.age.value;
+    },
+  },
+  watch: {
+    name(val, oldVal) {
+      console.log(val, oldVal);
+    },
+    age(val, oldVal) {
+      console.log(val, oldVal);
+    },
+  },
 });
