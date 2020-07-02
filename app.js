@@ -1,6 +1,6 @@
 // 实力化vue 对象
 new Vue({
-  el: '#vue-app', //html入口
+  el: '#vue-app', //html入口,可操作的元素
   data: {
     name: 'Summer',
     wechat: 123456,
