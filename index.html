@@ -9,12 +9,19 @@
     <title>Vue CDN DEMO</title>
   </head>
   <body>
-    <h1>注册全局组件</h1>
-    <div id="vue-app-one">
-      <greet></greet>
-    </div>
-    <div id="vue-app-two">
-      <greet />
+    <h1>Fetch请求</h1>
+    <div id="vue-app">
+      <form @submit.prevent="submit()">
+        <input type="text" v-model="todo.title" />
+        <input type="checkbox" v-model="todo.completed" />
+        <input type="submit" value="提交" />
+      </form>
+      <ul>
+        <li v-for="todo in todos">
+          <h3>{{todo.title}}</h3>
+          <p v-if="todo.completed">{{todo.completed}}</p>
+        </li>
+      </ul>
     </div>
     <script src="app.js"></script>
   </body>

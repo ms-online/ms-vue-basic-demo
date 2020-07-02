@@ -1,1 +1,2 @@
-lesson18:注册全局组件
+lesson19:数据请求方法：fetch
+es6：请求 API 方法 fetch
