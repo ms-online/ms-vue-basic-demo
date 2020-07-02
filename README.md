@@ -1,1 +1,1 @@
-lesson7:vue 中的事件（键盘事件和对应的修饰符）
+lesson8:v-model 双向数据绑定（input/select/textarea）
