@@ -1,1 +1,1 @@
-lesson11:watch 对象 监听数据 可以在调试的时候使用，一般不建议使用，因为损耗性能。
+lesson12:computed 计算属性，发生变化才走，可以和 methode 做对比。

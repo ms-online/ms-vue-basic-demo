@@ -2,23 +2,29 @@
 new Vue({
   el: '#vue-app', //html入口
   data: {
-    name: '',
     age: 20,
+    a: 0,
+    b: 0,
   },
   methods: {
-    getName() {
-      this.name = this.$refs.name.value;
-    },
-    getAge() {
-      this.age = this.$refs.age.value;
-    },
+    // addToA() {
+    //   console.log('addToA');
+    //   return this.age + this.a;
+    // },
+    // addToB() {
+    //   console.log('addToB');
+    //   return this.age + this.b;
+    // },
   },
-  watch: {
-    name(val, oldVal) {
-      console.log(val, oldVal);
+  computed: {
+    // 必须有返回值
+    addToA() {
+      console.log('addToA');
+      return this.age + this.a;
     },
-    age(val, oldVal) {
-      console.log(val, oldVal);
+    addToB() {
+      console.log('addToB');
+      return this.age + this.b;
     },
   },
 });

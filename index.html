@@ -11,14 +11,16 @@
   <body>
     <!-- 声明vue的el -->
     <div id="vue-app">
-      <!-- 双向数据绑定：input/select/textarear -->
-      <h1>ref</h1>
-      <label for="name">姓名</label>
-      <input type="text" name="name" ref="name" @keyup="getName" />
-      <span>{{ name }}</span>
-      <label for="age">年龄</label>
-      <input type="text" age="age" ref="age" @keyup="getAge" />
-      <span>{{ age }}</span>
+      <!-- computed 计算属性 -->
+      <button @click="a++">Add to A</button>
+      <button @click="b++">Add to B</button>
+
+      <!-- methods:都会执行 -->
+      <!-- <span>Age + A = {{addToA()}}</span>
+      <span>Age + B = {{addToB()}}</span> -->
+      <!-- computed:变化才执行，返回对象的属性不加括号 -->
+      <span>Age + A = {{addToA}}</span>
+      <span>Age + B = {{addToB}}</span>
     </div>
     <script src="app.js"></script>
   </body>
