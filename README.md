@@ -1,2 +1,3 @@
-lesson19:数据请求方法：fetch
-es6：请求 API 方法 fetch
+lesson20:Axios 请求
+
+比 fetch 更加简洁
