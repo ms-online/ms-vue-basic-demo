@@ -1,3 +1,3 @@
-lesson20:Axios 请求
+lesson21:vue cli(脚手架)开发
 
-比 fetch 更加简洁
+安装：node.js,npm,cnpm @vue/cli
